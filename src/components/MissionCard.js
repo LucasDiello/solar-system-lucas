@@ -1,5 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FaCalendarDay } from "react-icons/fa"
+import { FaMapMarkerAlt } from "react-icons/fa"
+import { FaFlag } from "react-icons/fa"
+
+
 
 class MissionCard extends React.Component {
   render() {
@@ -8,11 +13,15 @@ class MissionCard extends React.Component {
     const { country } = this.props;
     const { destination } = this.props;
     return (
-      <div data-testid="mission-card">
+      <div data-testid="mission-card" className='mission-card'>
+        <div className='mission-name'>
         <p data-testid="mission-name">{name}</p>
-        <p data-testid="mission-year">{year}</p>
-        <p data-testid="mission-country">{country}</p>
-        <p data-testid="mission-destination">{destination}</p>
+        </div>
+        <div className='missions-rest'>
+        <p data-testid="mission-year">{<FaCalendarDay />}  {year}</p>
+        <p data-testid="mission-country" className='countrys'>{<FaMapMarkerAlt />} {country}</p>
+        <p data-testid="mission-destination">{<FaFlag />} {destination}</p>
+        </div>
       </div>
     );
   }

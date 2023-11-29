@@ -66,17 +66,6 @@ hr {
 #root>div.solar-system>div>img {
   width: 41px;
   height: 31px;
-  animation: rotate 10s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(160deg);
-  }
 }
 
 
